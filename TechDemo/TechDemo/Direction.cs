@@ -11,6 +11,7 @@ namespace TechDemo
         LEFT,
         RIGHT,
         UP,
-        DOWN
+        DOWN,
+        NONE
     }
 }
