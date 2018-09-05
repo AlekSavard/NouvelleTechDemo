@@ -10,7 +10,8 @@ namespace TechDemo
     {
         static void Main(string[] args)
         {
-
+            Game app = new Game();
+            app.Run();
         }
     }
 }
