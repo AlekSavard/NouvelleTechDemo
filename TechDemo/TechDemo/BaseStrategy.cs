@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
-    class BaseStrategy
+    abstract class BaseStrategy
     {
+        public BaseStrategy() { }
+
+        public abstract Direction Act();
+
+        class NullStrategy : BaseStrategy
+        {
+            public override Direction Act()
+            {
+                return Direction.NONE;
+            }
+        }
     }
 }

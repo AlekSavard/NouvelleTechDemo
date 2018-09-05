@@ -8,6 +8,8 @@ namespace TechDemo
 {
     class Character : GameObject
     {
+        protected bool isDead = false;
 
+        public Character() { }
     }
 }

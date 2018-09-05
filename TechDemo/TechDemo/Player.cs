@@ -8,5 +8,51 @@ namespace TechDemo
 {
     class Player : Character
     {
+        public const char VISUAL_ALIVE = 'E';
+        public const char VISUAL_DEAD = 'X';
+
+        public char CurrentVisual { get; private set; }
+
+        public Player()
+        {
+            CurrentVisual = VISUAL_ALIVE;
+        }
+
+        public void Update(Direction directionMove)
+        {
+            Move(directionMove);
+        }
+
+        public void Collided()
+        {
+            isDead = true;
+            CurrentVisual = VISUAL_DEAD;
+        }
+
+        public ConsoleKeyInfo GetInput()
+        {
+            return Console.ReadKey();
+        }
+
+        private void Move(Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.DOWN:
+                    positionY++;
+                    break;
+                case Direction.LEFT:
+                    positionX--;
+                    break;
+                case Direction.RIGHT:
+                    positionX++;
+                    break;
+                case Direction.UP:
+                    positionY--;
+                    break;
+                case Direction.NONE:
+                    break;
+            }
+        }
     }
 }
