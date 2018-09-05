@@ -8,5 +8,10 @@ namespace TechDemo
 {
     class Wall : GameObject
     {
+        public Wall(int positionX, int positionY)
+        {
+            this.positionX = positionX;
+            this.positionY = positionY;
+        }
     }
 }
