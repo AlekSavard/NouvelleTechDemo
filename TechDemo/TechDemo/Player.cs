@@ -31,7 +31,7 @@ namespace TechDemo
 
         public ConsoleKeyInfo GetInput()
         {
-            return Console.ReadKey();
+            return Console.ReadKey(Console.KeyAvailable);
         }
 
         private void Move(Direction direction)
