@@ -12,7 +12,7 @@ namespace TechDemo
 
         public abstract Direction Act();
 
-        class NullStrategy : BaseStrategy
+        public class NullStrategy : BaseStrategy
         {
             public override Direction Act()
             {

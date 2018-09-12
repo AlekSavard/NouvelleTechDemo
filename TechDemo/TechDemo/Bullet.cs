@@ -8,11 +8,13 @@ namespace TechDemo
 {
     class Bullet : GameObject
     {
-        private const char VISUAL_BULLET = '¤';
+        public const char VISUAL_BULLET = '¤';
         private Direction direction;
 
-        public Bullet(Direction bulletDirection)
+        public Bullet(int posX, int posY, Direction bulletDirection)
         {
+            positionX = posX;
+            positionY = posY;
             direction = bulletDirection;
         }
 

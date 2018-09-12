@@ -15,8 +15,10 @@ namespace TechDemo
 
         public char CurrentVisual { get; private set; }
 
-        public Enemy()
+        public Enemy(int posX, int posY)
         {
+            positionX = posX;
+            positionY = posY;
             strategy = new EnemyStrategy();
             CurrentVisual = VISUAL_ALIVE;
         }
