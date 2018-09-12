@@ -13,8 +13,10 @@ namespace TechDemo
 
         public char CurrentVisual { get; private set; }
 
-        public Player()
+        public Player(int posX, int posY)
         {
+            positionX = posX;
+            positionY = posY;
             CurrentVisual = VISUAL_ALIVE;
         }
 
