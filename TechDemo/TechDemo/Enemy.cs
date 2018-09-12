@@ -61,8 +61,8 @@ namespace TechDemo
 
         private void Die()
         {
-            isDead = true;
             CurrentVisual = VISUAL_DEAD;
+            strategy = new BaseStrategy.NullStrategy();
         }
     }
 }

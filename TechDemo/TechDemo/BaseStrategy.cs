@@ -14,6 +14,7 @@ namespace TechDemo
 
         public class NullStrategy : BaseStrategy
         {
+            public NullStrategy() { }
             public override Direction Act()
             {
                 return Direction.NONE;
