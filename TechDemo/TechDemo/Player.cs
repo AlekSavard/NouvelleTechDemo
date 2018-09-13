@@ -8,8 +8,7 @@ namespace TechDemo
 {
     class Player : Character
     {
-        public const char VISUAL_ALIVE = 'E';
-        public const char VISUAL_DEAD = 'X';
+        public const char VISUAL = 'E';
 
         public char CurrentVisual { get; private set; }
 
@@ -17,7 +16,7 @@ namespace TechDemo
         {
             positionX = posX;
             positionY = posY;
-            CurrentVisual = VISUAL_ALIVE;
+            CurrentVisual = VISUAL;
         }
 
         public void Update(Direction directionMove)
@@ -27,8 +26,7 @@ namespace TechDemo
 
         public void Collided()
         {
-            isDead = true;
-            CurrentVisual = VISUAL_DEAD;
+            Environment.Exit(0);
         }
 
         public ConsoleKeyInfo GetInput()

@@ -49,17 +49,7 @@ namespace TechDemo
             }
         }
 
-        public void Collide()
-        {
-            Die();
-        }
-
-        public void Shot()
-        {
-            Die();
-        }
-
-        private void Die()
+        public void Die()
         {
             CurrentVisual = VISUAL_DEAD;
             strategy = new BaseStrategy.NullStrategy();

@@ -162,7 +162,7 @@ namespace TechDemo
                 }
                 if (enemy.positionY == player.positionY && enemy.positionX == player.positionX)
                 {
-                    enemy.Collide();
+                    enemy.Die();
                     player.Collided();
                 }
             }
@@ -188,7 +188,7 @@ namespace TechDemo
                         if (bullet.positionX == enemy.positionX && bullet.positionY == enemy.positionY)
                         {
                             bulletsToDestroy.Enqueue(bullet);
-                            enemy.Collide();
+                            enemy.Die();
                         }
                     }
                 }
@@ -220,7 +220,7 @@ namespace TechDemo
                 Console.Write(Wall.VISUAL);
             }
             Console.SetCursorPosition(player.positionX, player.positionY);
-            Console.Write(Player.VISUAL_ALIVE);
+            Console.Write(Player.VISUAL);
         }
 
         private void ReadInput()
@@ -309,7 +309,7 @@ namespace TechDemo
                 if (player.positionY == enemy.positionY && player.positionX == enemy.positionX)
                 {
                     player.Collided();
-                    enemy.Collide();
+                    enemy.Die();
                 }
             }
         }
