@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
+    /// <summary>
+    /// Classe de la strategie de base d'un ennemi
+    /// </summary>
     class EnemyStrategy : BaseStrategy
     {
         private static Random rand = new Random();
 
+        /// <summary>
+        /// Méthode d'action d'un ennemi.
+        /// Les ennemis bougent au hasard dans la map.
+        /// </summary>
+        /// <returns></returns>
         public override Direction Act()
         {
             int nextDirection = rand.Next(0, 4);

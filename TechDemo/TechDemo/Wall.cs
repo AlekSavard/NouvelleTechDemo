@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
+    /// <summary>
+    /// Classe qui représente un mur dans la logique du jeu
+    /// </summary>
     class Wall : GameObject
     {
         public const char VISUAL = '#';

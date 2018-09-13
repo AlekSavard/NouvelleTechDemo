@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
+    /// <summary>
+    /// Classe qui représente un objet du jeu (Les murs)
+    /// </summary>
     class GameObject
     {
         public int positionX

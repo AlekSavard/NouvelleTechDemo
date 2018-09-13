@@ -23,9 +23,12 @@ namespace TechDemo
         private Wall[] walls;
         private Player player;
         private int frameRate = 0;
-        private Thread threadMove;
-        private Thread threadShoot;
 
+        /// <summary>
+        /// Constructeur de la game.
+        /// Le monde se construit avec ses murs.
+        /// Initialise aussi la position des ennemis et du joueur.
+        /// </summary>
         public Game()
         {
             walls = new Wall[GAME_WIDTH * 2 + GAME_HEIGHT * 2 - 2];
@@ -77,6 +80,7 @@ namespace TechDemo
 
         private void Update()
         {
+            //Boucle d'update à tous les 600 frames, car on utilise pas un DeltaTime
             if (frameRate++ == 600)
             {
                 EnemyUpdate();
@@ -91,6 +95,10 @@ namespace TechDemo
             }
         }
 
+        /// <summary>
+        /// Méthode d'update des ennemis
+        /// Cette méthode gère le mouvement, la détection des collision et la mort des ennemis
+        /// </summary>
         private void EnemyUpdate()
         {
             foreach (var enemy in enemies)
@@ -168,6 +176,10 @@ namespace TechDemo
             }
         }
 
+        /// <summary>
+        /// Méthode d'update des balles.
+        /// Cette méthode gère le mouvement des balles et leur destruction.
+        /// </summary>
         private void BulletUpdate()
         {
             lock (bullets)
@@ -201,6 +213,9 @@ namespace TechDemo
             }
         }
 
+        /// <summary>
+        /// Méthode draw du programme.
+        /// </summary>
         private void Draw()
         {
             Console.Clear();
@@ -223,12 +238,16 @@ namespace TechDemo
             Console.Write(Player.VISUAL);
         }
 
+        /// <summary>
+        /// Méthode de lecture de commande du joueur.
+        /// </summary>
         private void ReadInput()
         {
             ConsoleKey key = Console.ReadKey(true).Key;
             bool canMove = true;
             switch (key)
             {
+                //Gestion du mouvement
                 case ConsoleKey.W:
                     foreach (var wall in walls)
                     {
@@ -290,7 +309,7 @@ namespace TechDemo
                     }
                     break;
 
-                //Gestion de shoot
+                //Gestion du tir
                 case ConsoleKey.UpArrow:
                     bullets.Add(new Bullet(player.positionX, player.positionY, Direction.UP));
                     break;

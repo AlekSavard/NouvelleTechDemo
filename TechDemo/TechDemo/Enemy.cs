@@ -66,6 +66,9 @@ namespace TechDemo
             }
         }
 
+        /// <summary>
+        /// Méthode qui gère la mort d'un ennemi
+        /// </summary>
         public void Die()
         {
             CurrentVisual = VISUAL_DEAD;
