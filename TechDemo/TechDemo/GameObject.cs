@@ -8,7 +8,15 @@ namespace TechDemo
 {
     class GameObject
     {
-        protected int positionX;
-        protected int positionY;
+        public int positionX
+        {
+            protected set;
+            get;
+        }
+        public int positionY
+        {
+            protected set;
+            get;
+        }
     }
 }
