@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
+    /// <summary>
+    /// Les différentes directions qui peuvent être attribués aux objets du monde.
+    /// </summary>
     enum Direction
     {
         LEFT,

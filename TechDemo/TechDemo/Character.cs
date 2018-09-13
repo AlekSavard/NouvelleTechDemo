@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TechDemo
 {
-    class Character : GameObject
+    /// <summary>
+    /// Classe abstraite qui représente un entité dans notre univers.
+    /// </summary>
+    abstract class Character : GameObject
     {
         protected bool isDead = false;
 
